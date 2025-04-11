@@ -1,0 +1,129 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#main{
+    text-align: center;
+}
+
+#main-head{
+    font-size: xx-large;
+    padding-top: 15px;
+}
+#quote{
+    font-style: italic;
+    margin-top: 20px;
+}
+#search-bar{
+    margin: 25px  0px 0px 0px;
+}
+#search{
+    width: 30%;
+    height: 25px;
+    border-radius: 5px;
+    padding-left: 5px;
+    margin-bottom: 20px;
+}
+#search-btn{
+    width: 60px;
+    height: 29px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+#div-1{
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    grid-gap: 15px;
+    background:linear-gradient(37deg,gray,transparent);
+    justify-items: center;
+}
+#div{
+    background:linear-gradient(45deg, gray, transparent);
+    margin-top: 15px;
+    height: fit-content;
+
+}
+
+img{
+    width: 370px;
+    height: 300px;
+    border-radius: 15px;
+}
+.recipe{
+    border-radius: 15px;
+    width: fit-content;
+    margin: 17px 0px ;
+    background-color: white;
+}
+.recipe:hover{
+    transform: scale(1.02);
+}
+.btn{
+    background-color: gray;
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    margin: 10px;
+}
+#recipe-details{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color:rgb(128, 124, 124);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width: 40%;
+    height: 60%;
+    overflow-y: scroll;
+    border-radius: 3px;
+}
+#recipe-details::-webkit-scrollbar{
+    width: 10px;
+}
+#recipe-details::-webkit-scrollbar-thumb{
+ background-color: #b5b5ba;
+ border-radius: 15px;
+}
+#close-btn{
+    display: flex;
+    height: 23px;
+    width: 23px;
+    border-radius: 0px;
+}
+h4{
+    text-align: left;
+    margin-top:15px ;
+}
+.recipe-contents{
+    padding: 10px;
+}
+.RecipeName{
+    text-decoration: underline black 2px;
+}
+.Instruction{
+    line-height: 20px;
+    white-space: pre-line;
+    text-align: left;
+}
+li{
+    text-align: left;
+    margin-left: 15px;
+    line-height: 20px;
+}
+.head-1{
+    text-align: center;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(45deg , gray,transparent);
+    width: 100%;
+    font-style: italic;
+}
+#sugg{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(45deg,gray,transparent);
+}
