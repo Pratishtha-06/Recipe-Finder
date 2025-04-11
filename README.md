@@ -7,7 +7,7 @@ that allows users to search for recipes based on ingredients or dish names.The a
 This project aims to find delicious recipe and different type of recipes quickly without needing to browse multiple websites.
 
 # 🛠️ Tech Stack
-Frontend: React, HTML5, CSS3, JavaScript (ES6+)
+Frontend: HTML5, CSS3, JavaScript (ES6+)
 API: ThemealDB API
 
 # ⚙️ Features
