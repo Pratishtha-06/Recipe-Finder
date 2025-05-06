@@ -139,7 +139,7 @@ const Recipe = async (query)=>{
     Loading.style.display=`flex`;
     
     try{  
-    const data =await  fetch(`http://www.themealdb.com/api/json/v1/1/filter.php?a=${area}`);
+    const data =await  fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${area}`);
     const response = await data.json();
 
     
@@ -178,7 +178,7 @@ const Recipe = async (query)=>{
       })
 
       const RecipePop=async(getId)=>{
-        const dataById=await fetch(`http://www.themealdb.com/api/json/v1/1/lookup.php?i=${getId}`)
+        const dataById=await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${getId}`)
         const IdResponse=await dataById.json();
         const mealDetails=IdResponse.meals[0];
       
