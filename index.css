@@ -39,7 +39,7 @@
     justify-items: center;
 }
 #div{
-    background:linear-gradient(45deg, gray, transparent);
+    background:linear-gradient(45deg, #b5b5ba, transparent);
     margin-top: 15px;
     height: fit-content;
 
@@ -71,10 +71,10 @@ img{
     position: fixed;
     top: 50%;
     left: 50%;
-    background-color:rgb(128, 124, 124);
+    background-color:rgb(200, 194, 194,1);
     -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
-    width: 40%;
+    width: 60%;
     height: 60%;
     overflow-y: scroll;
     border-radius: 3px;
@@ -127,3 +127,82 @@ li{
     justify-content: center;
     background: linear-gradient(45deg,gray,transparent);
 }
+#cuisine-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    justify-items: center;
+    padding:10px 0px;
+    margin: 10px;
+   
+}
+.cuisine-heading{
+    background-color:#b5b5ba;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: x-large;
+    font-style: italic;
+ 
+}
+#div-2,#div-3,#div-4,#div-5,#div-6{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    background-color:white;
+}
+.Cuisine-head{
+    margin: 10px;
+    font-size: larger;
+}
+#child-1,#child-2,#child-3,#child-4,#child-5{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 20px;
+    background-color: #b5b5ba ;
+    padding: 15px 10px;
+}
+#loader{
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: none;
+    border: 2px solid black;
+    border-radius: 20px;
+    border-bottom: transparent;
+   
+
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+    
+}
+#Loading {
+    display: none; /* hidden by default */
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 9999;
+  }
+ .recipe-grid{
+    background-color: white;
+    padding-top: 15px;
+    border-radius: 10px;
+ } 
