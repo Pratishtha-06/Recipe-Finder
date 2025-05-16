@@ -37,7 +37,7 @@ const Recipe = async (query)=>{
     if (!query){
       Suggestions.innerHTML=`<h2 class="head-1">Suggestions for you to explore more !</h2>`;
      sugg.innerHTML=`<h2 class ="head-1">Search to get the recipe of your favourate dish...</h2>`;
-     response.meals=response.meals.sort(()=>0.5-Math.random()).slice(0,7);
+     response.meals=response.meals.sort(()=>0.5-Math.random()).slice(0,11);
      }
   
 //Non matched input     
@@ -138,16 +138,15 @@ const Recipe = async (query)=>{
     Load.style.display=`block`;
     Loading.style.display=`flex`;
     
-    try{  
+    try{
     const data =await  fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${area}`);
     const response = await data.json();
 
     
     Load.style.display=`none`;
     Loading.style.display=`none`;
-
+    
     const container = document.getElementById(containerId);
-
     const containerChild = document.createElement("div");
     containerChild.id = childId;
     container.appendChild(containerChild);
@@ -157,7 +156,7 @@ const Recipe = async (query)=>{
       return;
     }
 
-    const meal=response.meals.sort(()=>0.5-Math.random()).slice(0,5);
+    const meal=response.meals.sort(()=>0.5-Math.random()).slice(0,6);
 
     meal.forEach(meal=>{
       const getId = meal.idMeal;
@@ -207,32 +206,10 @@ const Recipe = async (query)=>{
     console.log("error:",err);
   }}
   
-  document.querySelectorAll('.cuisine-heading').forEach(heading => {
-    heading.addEventListener('click', () => {
-      const area = heading.getAttribute('data-area');
-  
-      const containerMap = {
-        'Indian': { containerId: 'div-2', childId: 'child-1' },
-        'Italian': { containerId: 'div-3', childId: 'child-2' },
-        'Mexican': { containerId: 'div-4', childId: 'child-3' },
-        'Canadian': { containerId: 'div-5', childId: 'child-4' },
-        'Chinese': { containerId: 'div-6', childId: 'child-5' },
-
-      };
-  
-      const ids = containerMap[area];
-  
-      if (ids) {
-        // Hide other cuisine sections
-        document.querySelectorAll('#cuisine-container > div').forEach(div => {
-          if (div.id !== ids.containerId) {
-            div.remove();
-          }
-        });
-  
-        LoadCuisine(area, ids.containerId, ids.childId);
-      }
-    });
-  });
-  
-  
+  window.addEventListener("DOMContentLoaded", () => {
+  LoadCuisine('Indian', 'div-2', 'child-1');
+  LoadCuisine('Italian', 'div-3', 'child-2');
+  LoadCuisine('Mexican', 'div-4', 'child-3');
+  LoadCuisine('Canadian', 'div-5', 'child-4');
+  LoadCuisine('Chinese', 'div-6', 'child-5');
+});
