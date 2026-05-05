@@ -8,6 +8,7 @@ This project aims to find delicious recipe and different type of recipes quickly
 
 # 🛠️ Tech Stack
 Frontend: HTML5, CSS3, JavaScript (ES6+)
+
 API: ThemealDB API
 
 # ⚙️ Features
